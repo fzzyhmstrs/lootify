@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "Lootify",
+  "description":"Library that allows you to add to existing loot pools via creation of standard MC loot tables representing the added drops.",
+  "icon": "assets/lootify/icon.png",
+  "authors": [
+    "fzzyhmstrs"
+  ],
+  "entrypoints": {
+    "main": [
+        "fzzyhmstrs.lootify.Lootify"
+    ]
+  },
+  "mixins": [
+    "lootify.mixins.json"
+  ],
+  "license": "MIT License",
+  "depends": {
+    "minecraft": "1.19.x"
+  }
+}
