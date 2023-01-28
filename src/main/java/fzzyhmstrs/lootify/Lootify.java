@@ -32,6 +32,7 @@ public class Lootify implements ModInitializer {
                         ((DirectlyAddableBuilder)tableBuilder).addFunction(function);
                     }
                 }
+                ServerResourceData.findTable(id);
             }
         });
     }
