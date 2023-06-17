@@ -33,11 +33,11 @@ public class ServerResourceData {
         String path = id.getPath();
         Identifier id2 = new Identifier(id.getNamespace(), path.substring(LOOTIFY_PATH_LENGTH, path.length() - FILE_SUFFIX_LENGTH));
         String path2 = id2.getPath();
-        if (!(path2.startsWith("gameplay/") || path2.startsWith("chests/") || path2.startsWith("blocks/") || path2.startsWith("entities/"))){
+        /*if (!(path2.startsWith("gameplay/") || path2.startsWith("chests/") || path2.startsWith("blocks/") || path2.startsWith("entities/") || path2.startsWith("entities/"))){
             Lootify.LOGGER.error("File path for [" + id + "] not correct; needs a 'blocks', 'chests', 'gameplay', or 'entities' subfolder. Skipping.");
             Lootify.LOGGER.error("Example: [./data/mod_id/direct_drops/blocks/cobblestone.json] is a valid block direct drop table path for a block added by [mod_id].");
             return;
-        }
+        }*/
         try {
             BufferedReader reader = resource.getReader();
             JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
@@ -48,7 +48,7 @@ public class ServerResourceData {
                 Lootify.LOGGER.error("Loot table in file [" + id + "] is empty!");
             }
         } catch(Exception e){
-            Lootify.LOGGER.error("Failed to open or read direct drops loot table file: " + id);
+            Lootify.LOGGER.error("Failed to open or read lootify table file: " + id);
         }
     }
 
