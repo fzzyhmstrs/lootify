@@ -18,6 +18,7 @@
   ],
   "license": "MIT License",
   "depends": {
-    "minecraft": "1.19.x"
+    "minecraft": ">=1.20",
+    "fabric-api": "*"
   }
 }
